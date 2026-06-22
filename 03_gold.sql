@@ -47,7 +47,7 @@ ORDER BY dt_competencia, cd_operadora, cd_municipio;
 
 -- -------------------------------------------------------------
 -- CACHING — Agregações pré-computadas por tema analítico
--- Evita full scans repetidos na fact_beneficiarios a cada consulta
+-- Evita full scans repetidos na tb_beneficiarios_anl a cada consulta
 -- -------------------------------------------------------------
 
 -- Cache A: beneficiários por operadora
