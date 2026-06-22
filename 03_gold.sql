@@ -10,8 +10,8 @@ CREATE SCHEMA IF NOT EXISTS gold;
 
 -- -------------------------------------------------------------
 -- TABELA BASE: dados pré-agregados na menor granularidade útil
--- Particionamento lógico: ORDER BY dt_competencia garante
--- locality of reference para scans temporais (padrão Parquet/Iceberg).
+-- Particionamento lógico: a ordenação por dt_competencia organiza os dados por período,
+-- facilitando consultas temporais e melhorando a leitura analítica.
 -- -------------------------------------------------------------
 CREATE OR REPLACE TABLE gold.tb_beneficiarios_anl AS
 SELECT
